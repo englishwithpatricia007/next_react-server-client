@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Descrição do Projeto
 
-## Getting Started
+### Tecnologias e Linguagens Utilizadas
 
-First, run the development server:
+- **Next.js**: Framework React para aplicações web modernas, com suporte a Server Components, SSR, SSG e API Routes.
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática.
+- **Tailwind CSS** (opcional): Framework CSS utilitário para estilização rápida.
+- **Node.js**: Ambiente de execução JavaScript no servidor.
+- **npm/yarn/pnpm/bun**: Gerenciadores de pacotes para instalar dependências.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Passos para Configuração
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clonar o Repositório**
+   ```bash
+   git clone <url-do-repositorio>
+   cd <nome-do-projeto>
+2. **Instalar as Dependências**
+   ```bash
+   npm install
+3. **Rodar o servidor de Desenvolvimento**
+   ```bash
+   npm run dev
+4. **Acessar o navegador**
+   * Abra http://localhost:3000 para visualizar a aplicação.
+  
+### Estrutura do Projeto ###
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **src/app/**: Diretório principal das rotas e páginas do projeto (usando o novo App Router do Next.js).
+- **src/app/page.tsx**: Página inicial, exemplo de Server Component com fetch assíncrono.
+- **public/**: Arquivos estáticos (imagens, ícones, etc).
+- **package.json**: Gerenciamento de dependências e scripts.
+- **tsconfig.json**: Configuração do TypeScript.
 
-## Learn More
+### Observações ###
+O projeto utiliza Server Components, então o fetch de dados pode ser feito diretamente dentro dos componentes assíncronos.
+O arquivo src/app/page.tsx faz uma requisição à API do GitHub e utiliza o avatar do usuário.
+O revalidação incremental (revalidate) está configurado para 60 segundos, permitindo que a página seja atualizada periodicamente com novos dados.
+   
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
